@@ -4,8 +4,7 @@ This is just my portfolio, nothing too fancy. Just some code and good vibes.
 
 Feel free to fork this, copy the code, or edit whatever you want. Honestly, it's not even really my code anyway, so go crazy with it!
 
-Check it out live on AI Studio: https://ai.studio/apps/drive/1dNrj_lLfQsyT3v8xHLqsFok5qHRZGwJ_
-Or watch it on GitHub Pages: https://quantum3600.github.io/NeoFolio/
+Check it out live on GitHub Pages: https://quantum3600.github.io/NeoFolio/
 
 ## Run This On Your Machine 💻
 
