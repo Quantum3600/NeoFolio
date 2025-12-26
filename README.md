@@ -1,31 +1,30 @@
-# Yo what's good! 👋
+# Hey there! 👋
 
-Aight so this is literally just my portfolio, nothing crazy fr fr 💀 Just vibes and code, no cap 🙏
+This is just my portfolio, nothing too fancy. Just some code and good vibes.
 
-Feel free to fork this bad boy, yoink the code, edit whatever you want - open source things hit different tbh lmao 😅 Do your thing bestie!
+Feel free to fork this, copy the code, or edit whatever you want. Honestly, it's not even really my code anyway, so go crazy with it!
 
-Peep it live on AI Studio: https://ai.studio/apps/drive/1dNrj_lLfQsyT3v8xHLqsFok5qHRZGwJ_
-Or Watch it in GitHub Pages: https://quantum3600.github.io/NeoFolio/
+Check it out live on AI Studio: https://ai.studio/apps/drive/1dNrj_lLfQsyT3v8xHLqsFok5qHRZGwJ_
+Or watch it on GitHub Pages: https://quantum3600.github.io/NeoFolio/
 
 ## Run This On Your Machine 💻
 
-**Prerequisites:**  Node.js (you know the drill)
-
+**Prerequisites:** Node.js (you know the drill)
 
 1. Install dependencies:
    ```bash
    npm install
    ```
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key (gotta get those API keys 🔑)
+2. Set the `GEMINI_API_KEY` in `.env.local` to your Gemini API key (you'll need to grab one first).
 3. Run the app:
    ```bash
    npm run dev
    ```
 
-**Lowkey you should star ⭐ this repo so you don't forget about it later** (future you will thank you fr)
+You should probably star ⭐ this repo just so you don't forget about it later.
 
 ---
 
-The UI is straight up **bussin'** - so clean you'll wanna lick your screen ngl 😮‍💨✨
+The UI is honestly beautiful—it's so clean you might actually want to lick your screen. ✨
 
-**Made with mad love 💙 by trishit using Google AI Studio**
+**Made with love 💙 by Trishit using Google AI Studio**
