@@ -10,8 +10,8 @@ export const PORTFOLIO_DATA = {
     linkedin: "linkedin.com/in/trishit-majumdar-008344281",
     twitter: "twitter.com/Trishit18", // Placeholder for X/Twitter
     email: "trishitquantum360@gmail.com",
-    instagram: "instagram.com/com.trishit.quantum3600", // Placeholder
-    facebook: "facebook.com/com.trishit.quantum3600" // Placeholder
+    instagram: "instagram.com/com.trishit.quantum360", // Placeholder
+    facebook: "facebook.com/com.trishit.quantum360" // Placeholder
   },
   projects: [
     {
