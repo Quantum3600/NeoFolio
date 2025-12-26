@@ -126,6 +126,7 @@ const ProjectCard = ({project, index, key}: { project: Project, index: number, k
 function App() {
   const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
   const [activeSection, setActiveSection] = useState('home');
+  const [formData, setFormData] = useState({ name: '', message: '' });
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -162,6 +163,13 @@ function App() {
   useEffect(() => {
     document.documentElement.className = theme === Theme.DARK ? 'dark' : '';
   }, [theme]);
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = `Portfolio Contact from ${formData.name}`;
+    const body = formData.message;
+    window.location.href = `mailto:${PORTFOLIO_DATA.socials.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   // General reveal animation variant
   const revealVar: Variants = {
@@ -381,17 +389,31 @@ function App() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="bg-white dark:bg-zinc-800 border-4 border-black p-10 shadow-neo flex flex-col gap-8" 
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleContactSubmit}
             >
               <div>
                 <label className="block text-xl font-black uppercase mb-3">Identify Yourself</label>
-                <input type="text" className="w-full bg-neo-bg border-4 border-black p-5 text-lg font-bold focus:outline-none focus:shadow-neo transition-all" placeholder="Name" />
+                <input 
+                  type="text" 
+                  className="w-full bg-neo-bg border-4 border-black p-5 text-lg font-bold focus:outline-none focus:shadow-neo transition-all" 
+                  placeholder="Name" 
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  required
+                />
               </div>
               <div>
                 <label className="block text-xl font-black uppercase mb-3">Transmission</label>
-                <textarea rows={5} className="w-full bg-neo-bg border-4 border-black p-5 text-lg font-bold focus:outline-none focus:shadow-neo transition-all" placeholder="Your message..."></textarea>
+                <textarea 
+                  rows={5} 
+                  className="w-full bg-neo-bg border-4 border-black p-5 text-lg font-bold focus:outline-none focus:shadow-neo transition-all" 
+                  placeholder="Your message..."
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  required
+                ></textarea>
               </div>
-              <button className="bg-neo-primary text-white border-4 border-black py-5 font-black text-xl uppercase tracking-widest hover:bg-black transition-colors hover:shadow-neo-hover">
+              <button type="submit" className="bg-neo-primary text-white border-4 border-black py-5 font-black text-xl uppercase tracking-widest hover:bg-black transition-colors hover:shadow-neo-hover">
                 Send Message
               </button>
             </motion.form>
