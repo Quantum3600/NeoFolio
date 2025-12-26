@@ -6,7 +6,7 @@
 
 Aight so this is literally just my portfolio, nothing crazy fr fr 💀 Just vibes and code, no cap 🙏
 
-Feel free to fork this bad boy, yoink the code, edit whatever you want - it's not even mine tbh lmao 😅 Do your thing bestie!
+Feel free to fork this bad boy, yoink the code, edit whatever you want - open source things hit different tbh lmao 😅 Do your thing bestie!
 
 Peep it live on AI Studio: https://ai.studio/apps/drive/1dNrj_lLfQsyT3v8xHLqsFok5qHRZGwJ_
 
