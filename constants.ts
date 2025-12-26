@@ -19,7 +19,7 @@ export const PORTFOLIO_DATA = {
       title: "KobGames Store",
       description: "A modern web game store interface built with Kobweb, showcasing the power of Kotlin on the web.",
       tech: ["Kobweb", "Kotlin", "Compose HTML"],
-      link: "#",
+      link: "https://github.com/Quantum3600/KobGames-Store",
       year: "2025"
     },
     {
@@ -27,7 +27,7 @@ export const PORTFOLIO_DATA = {
       title: "WakeApp",
       description: "A smart alarm Android application designed to ensure you wake up on time with intuitive UI patterns.",
       tech: ["Android", "Kotlin", "Jetpack Compose"],
-      link: "#",
+      link: "https://github.com/Quantum3600/WakeApp",
       year: "2025"
     },
     {
@@ -35,7 +35,7 @@ export const PORTFOLIO_DATA = {
       title: "Quotd",
       description: "A minimalistic quotes application delivering daily inspiration with a focus on Material Design.",
       tech: ["Android", "Kotlin", "MVVM"],
-      link: "#",
+      link: "https://github.com/Quantum3600/Quotd",
       year: "2025"
     }
   ] as Project[],

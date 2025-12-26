@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {motion, stagger, useScroll, useSpring, Variants} from 'framer-motion';
 import { 
   Moon, Sun, Monitor, Github, Linkedin, ExternalLink, Mail, ArrowRight, Code, Bot,
-  Twitter, Facebook, Instagram
+  Twitter, Facebook, Instagram, Download
 } from 'lucide-react';
 import Terminal from './components/Terminal';
 import ChatAssistant from './components/ChatAssistant';
@@ -11,6 +11,8 @@ import { PORTFOLIO_DATA } from './constants';
 import { Project, Theme } from './types';
 // @ts-ignore
 import photo from './assets/photo.webp';
+// @ts-ignore
+import resume from './assets/resume.pdf';
 
 // Helper for icons using Devicon classes
 const getTechIcon = (tech: string) => {
@@ -295,10 +297,20 @@ function App() {
         {/* Projects Section */}
         <section id="projects" className="mb-40">
           <SectionTitle color="bg-neo-secondary">Selected Works</SectionTitle>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
             {PORTFOLIO_DATA.projects.map((project, idx) => (
               <ProjectCard key={project.id} project={project} index={idx} />
             ))}
+          </div>
+          <div className="flex justify-center">
+            <a 
+              href={`https://${PORTFOLIO_DATA.socials.github}`} 
+              target="_blank" 
+              rel="noreferrer"
+              className="bg-white dark:bg-zinc-800 text-black dark:text-white border-4 border-black px-8 py-4 text-xl font-bold uppercase hover:bg-neo-primary hover:text-white shadow-neo hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center gap-3"
+            >
+              More Projects <Github size={24} />
+            </a>
           </div>
         </section>
 
@@ -384,6 +396,17 @@ function App() {
               </button>
             </motion.form>
           </div>
+        </section>
+
+        {/* Resume Download Section */}
+        <section className="mb-16 flex justify-center">
+          <a 
+            href={resume} 
+            download="Trishit_Majumdar_Resume.pdf"
+            className="bg-neo-accent text-black border-4 border-black px-10 py-5 text-2xl font-black uppercase hover:bg-white hover:shadow-neo transition-all flex items-center gap-4 shadow-neo-deep"
+          >
+            Download Resume <Download size={32} />
+          </a>
         </section>
 
       </main>
