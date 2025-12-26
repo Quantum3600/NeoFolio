@@ -398,7 +398,7 @@ function App() {
             <Bot size={32} />
           </div>
           <p className="text-base text-gray-500">
-            © {new Date().getFullYear()} // NEO_BRUTALISM_V1
+            © {new Date().getFullYear()} // NEO_FOLIO_V1
           </p>
         </div>
       </footer>
