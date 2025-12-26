@@ -72,7 +72,7 @@ const Terminal: React.FC = () => {
           exit={{ y: 100, opacity: 0 }}
           className="fixed bottom-4 left-4 bg-black text-white p-3 border-4 border-neo-primary font-mono shadow-neo hover:shadow-neo-hover transition-all z-40"
         >
-          >_ TERM
+          `{'>'}`_ TERM
         </motion.button>
       ) : (
         <motion.div 

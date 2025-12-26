@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useSpring, Variants } from 'framer-motion';
+import {motion, stagger, useScroll, useSpring, Variants} from 'framer-motion';
 import { 
   Moon, Sun, Monitor, Github, Linkedin, ExternalLink, Mail, ArrowRight, Code, Bot,
   Twitter, Facebook, Instagram
@@ -9,6 +9,8 @@ import ChatAssistant from './components/ChatAssistant';
 import CustomCursor from './components/CustomCursor';
 import { PORTFOLIO_DATA } from './constants';
 import { Project, Theme } from './types';
+// @ts-ignore
+import photo from './assets/photo.webp';
 
 // Helper for icons using Devicon classes
 const getTechIcon = (tech: string) => {
@@ -44,7 +46,7 @@ const SideNav = ({ activeSection }: { activeSection: string }) => {
   const sections = ['home', 'skills', 'projects', 'experience', 'contact'];
   
   return (
-    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-6">
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col">
       {sections.map((section) => (
         <a 
           key={section}
@@ -82,7 +84,7 @@ const SectionTitle = ({ children, color = "bg-neo-primary" }: { children: React.
   </motion.div>
 );
 
-const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
+const ProjectCard = ({project, index, key}: { project: Project, index: number, key?: string }) => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 50 }}
@@ -193,14 +195,14 @@ function App() {
         </button>
       </nav>
 
-      <main className="container mx-auto px-6 pt-32 pb-32">
-        
+      <main className="container mx-auto px-6 pt-24 md:pt-20 pb-32">
+
         {/* Hero Section */}
-        <section id="home" className="min-h-[85vh] flex items-center mb-24 relative">
+        <section id="home" className="min-h-[80vh] flex items-center mb-32 md:mr-12 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-            
+
             {/* Left Column: Image Placeholder */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
@@ -213,7 +215,7 @@ function App() {
                 
                 <div className="absolute inset-0 bg-white border-4 border-black overflow-hidden flex items-center justify-center relative z-10">
                   <motion.img 
-                    src={`https://api.dicebear.com/7.x/avataaars/svg?seed=Trishit&backgroundColor=FF6B6B`}
+                    src={photo}
                     alt="Trishit Majumdar"
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
@@ -232,7 +234,7 @@ function App() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={{
-                visible: { transition: { staggerChildren: 0.1 } }
+                visible: { transition: { delayChildren: stagger(0.1) } }
               }}
               className="order-1 lg:order-2 flex flex-col items-start"
             >
