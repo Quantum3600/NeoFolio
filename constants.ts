@@ -7,11 +7,11 @@ export const PORTFOLIO_DATA = {
   location: "West Bengal, India",
   socials: {
     github: "github.com/Quantum3600",
-    linkedin: "linkedin.com/in/trishitmajumdar",
-    twitter: "twitter.com/trishit_m", // Placeholder for X/Twitter
+    linkedin: "linkedin.com/in/trishit-majumdar-008344281",
+    twitter: "twitter.com/Trishit18", // Placeholder for X/Twitter
     email: "trishitquantum360@gmail.com",
-    instagram: "instagram.com/trishit.dev", // Placeholder
-    facebook: "facebook.com/trishit.majumdar" // Placeholder
+    instagram: "instagram.com/com.trishit.quantum3600", // Placeholder
+    facebook: "facebook.com/com.trishit.quantum3600" // Placeholder
   },
   projects: [
     {
@@ -20,7 +20,7 @@ export const PORTFOLIO_DATA = {
       description: "A modern web game store interface built with Kobweb, showcasing the power of Kotlin on the web.",
       tech: ["Kobweb", "Kotlin", "Compose HTML"],
       link: "#",
-      year: "2024"
+      year: "2025"
     },
     {
       id: "2",
@@ -28,7 +28,7 @@ export const PORTFOLIO_DATA = {
       description: "A smart alarm Android application designed to ensure you wake up on time with intuitive UI patterns.",
       tech: ["Android", "Kotlin", "Jetpack Compose"],
       link: "#",
-      year: "2023"
+      year: "2025"
     },
     {
       id: "3",
@@ -36,7 +36,7 @@ export const PORTFOLIO_DATA = {
       description: "A minimalistic quotes application delivering daily inspiration with a focus on Material Design.",
       tech: ["Android", "Kotlin", "MVVM"],
       link: "#",
-      year: "2023"
+      year: "2025"
     }
   ] as Project[],
   skills: [
@@ -65,7 +65,7 @@ export const PORTFOLIO_DATA = {
       role: "Secondary Education",
       company: "St. John's School",
       period: "Completed",
-      description: "Foundation laid at middle school level."
+      description: "Foundation laid at primary and middle school level."
     }
   ] as Experience[]
 };
