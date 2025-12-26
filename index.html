@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoBrutalist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Space Grotesk"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              neo: {
+                bg: '#f0f0f0',
+                text: '#1a1a1a',
+                primary: '#FF6B6B',
+                secondary: '#4ECDC4',
+                accent: '#FFE66D',
+                dark: '#2d3436',
+                border: '#000000',
+              }
+            },
+            boxShadow: {
+              'neo': '5px 5px 0px 0px rgba(0,0,0,1)',
+              'neo-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+              'neo-deep': '10px 10px 0px 0px rgba(0,0,0,1)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-left: 2px solid black;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FF6B6B;
+        border: 2px solid black;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff4757;
+      }
+      body {
+        cursor: none; /* Hide default cursor for custom one */
+      }
+      /* Fallback if JS fails */
+      @media (pointer: coarse) {
+        body {
+          cursor: auto;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+  }
+}
+</script>
+</head>
+  <body class="bg-neo-bg text-neo-text selection:bg-neo-primary selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
