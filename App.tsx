@@ -424,7 +424,7 @@ function App() {
         <section className="mb-16 flex justify-center">
           <a 
             href={resume} 
-            download="Trishit_Majumdar_Resume.pdf"
+            download="Resume (2).pdf"
             className="bg-neo-accent text-black border-4 border-black px-10 py-5 text-2xl font-black uppercase hover:bg-white hover:shadow-neo transition-all flex items-center gap-4 shadow-neo-deep"
           >
             Download Resume <Download size={32} />
